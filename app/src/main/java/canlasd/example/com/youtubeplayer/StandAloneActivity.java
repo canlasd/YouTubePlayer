@@ -13,7 +13,8 @@ public class StandAloneActivity extends AppCompatActivity implements View.OnClic
 
     private String GOOGLE_API_KEY = "AIzaSyCOCX2a1mULZKtgaSmZu_xLj5JePl9IwQE";
     private String YOUTUBE_VIDEO_ID = "eHevNn-AVQg";
-    private String YOUTUBE_PLAYLIST = "PLhRy0N4DxIyBXzUGKzUSdZ1qVDoP7-HHJ";
+    private String YOUTUBE_PLAYLIST = "PLXtTjtWmQhg3aTiE0y_iO_DRlKtTiv519";
+
     private Button btnPlayVideo;
     private Button btnPlayList;
 
@@ -31,14 +32,6 @@ public class StandAloneActivity extends AppCompatActivity implements View.OnClic
         btnPlayList.setOnClickListener(this);
         btnPlayVideo.setOnClickListener(this);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
     }
 
     @Override
@@ -53,7 +46,7 @@ public class StandAloneActivity extends AppCompatActivity implements View.OnClic
                 break;
 
             case R.id.btnPlayerList:
-                intent = YouTubeStandalonePlayer.createVideoIntent(this, GOOGLE_API_KEY,
+                intent = YouTubeStandalonePlayer.createPlaylistIntent(this, GOOGLE_API_KEY,
                         YOUTUBE_PLAYLIST);
                 break;
 
